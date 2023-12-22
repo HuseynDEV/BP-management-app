@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 
 
-const Admintable = () => {
+const AdminTable = () => {
     const [data, setData] = useState()
     useEffect(() => {
-        fetch('https://callous-knot-production.up.railway.app/api/v1/workers')
+        fetch('https://ragged-yak-production.up.railway.app/api/v1/workers')
             .then(response => response.json())
             .then(commits => setData(commits));
     }, [])
@@ -36,4 +36,4 @@ const Admintable = () => {
     )
 }
 
-export default Admintable
+export default AdminTable

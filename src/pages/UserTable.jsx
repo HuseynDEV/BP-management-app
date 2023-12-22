@@ -10,7 +10,6 @@ const UserTable = () => {
         sickDays: "",
         vacationDays: "",
         unpaidWorkingDays: "",
-        educationalVacation: ""
     }
     const [inputs, setInputs] = useState(initialState);
     const [errorMessage, setErrorMessage] = useState('');
@@ -24,7 +23,7 @@ const UserTable = () => {
         e.preventDefault();
         if (inputs.marineDaysOn.trim() === '' || inputs.trainingDays.trim() === '' ||
             inputs.sickDays.trim() === '' || inputs.vacationDays.trim() === '' || inputs.unpaidWorkingDays.trim() === ''
-            || inputs.educationalVacation.trim() === '') {
+            ) {
             setErrorMessage('Text input cannot be empty');
         } else {
             setErrorMessage('');
@@ -32,7 +31,7 @@ const UserTable = () => {
     };
 
     const saveBtn = async () => {
-        const url = `https://callous-knot-production.up.railway.app/api/v1/workers/${id}`; // Your POST endpoint
+        const url = `https://ragged-yak-production.up.railway.app/api/v1/workers/${id}`; // Your POST endpoint
         const data = {
             firstName: "Huseyn",
             lastname: "Alizada",
@@ -43,9 +42,9 @@ const UserTable = () => {
             sickDays: inputs.sickDays,
             vacationDays: inputs.vacationDays,
             unpaidWorkingDays: inputs.unpaidWorkingDays,
-            educationalVacation: inputs.educationalVacation,
             username: "fuad",
-            password: "54321"
+            password: "54321",
+            educationalVacation:0
         }
 
         fetch(url, {
@@ -80,7 +79,7 @@ const UserTable = () => {
         console.log(inputs)
         setIsButtonDisabled(inputs.marineDaysOn.trim() === '' || inputs.trainingDays.trim() === "" ||
             inputs.sickDays.trim() === '' || inputs.vacationDays.trim() === '' || inputs.unpaidWorkingDays.trim() === '' 
-            || inputs.unpaidWorkingDays.trim() === '' || inputs.educationalVacation.trim()==='')
+            || inputs.unpaidWorkingDays.trim() === '')
     }, [inputs]);
     return (
         <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-8 form-user">
@@ -149,21 +148,6 @@ const UserTable = () => {
                     type="number"
                     id="numberInput"
                     name='unpaidWorkingDays'
-                    onChange={handleOnchange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
-
-
-            </div>
-
-            <div className="mb-4">
-                <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
-                    Təhsil tətil günləri
-                </label>
-                <input
-                    type="number"
-                    id="numberInput"
-                    name='educationalVacation'
                     onChange={handleOnchange}
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />

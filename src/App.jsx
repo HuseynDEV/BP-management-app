@@ -7,7 +7,7 @@ import UserRegister from "./pages/UserRegister"
 import AdminLogin from "./pages/AdminLogin"
 import AdminRegister from "./pages/AdminRegister"
 import UserTable from "./pages/UserTable"
-import Admintable from "./pages/Admintable"
+import AdminTable from "./pages/AdminTable"
 import AdminTableDetails from "./pages/AdminTableDetails"
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   { path: "/adminlogin", element: <AdminLogin /> },
   { path: "/adminregister", element: <AdminRegister /> },
   { path: "/usertable/:id", element: <UserTable /> },
-  { path: "/admintable", element: <Admintable /> },
+  { path: "/admintable", element: <AdminTable /> },
   { path: "/admintable/:id", element: <AdminTableDetails /> }
 ])
 

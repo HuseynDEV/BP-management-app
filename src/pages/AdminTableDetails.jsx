@@ -8,7 +8,7 @@ const AdminTableDetails = () => {
   const [user, setUser] = useState([])
 
   useEffect(() => {
-    fetch(`https://callous-knot-production.up.railway.app/api/v1/workers`)
+    fetch('https://ragged-yak-production.up.railway.app/api/v1/workers')
       .then(response => response.json())
       .then(commits => setUser(commits.filter(data => data.id === Number(id))));
 
@@ -61,14 +61,7 @@ const AdminTableDetails = () => {
                 {user[0]?.trainingDays}
               </dd>
             </div>
-            <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">
-                Təlim günlərinin tarixi
-              </dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                {user[0]?.educationalVacation}
-              </dd>
-            </div>
+            
             <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt class="text-sm font-medium text-gray-500">
                 Təlim günlərinin tarixi
