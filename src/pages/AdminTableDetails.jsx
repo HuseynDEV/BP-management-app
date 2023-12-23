@@ -32,10 +32,11 @@ const AdminTableDetails = () => {
   // console.log(user[0]?.id)
 
   return (
-    <div className='flex items-center justify-center h-full bg-white'>
+    <div className='flex items-center justify-center w-full h-full bg-white'>
       <img src={image} className='absolute -z-1 top-0 bottom-0 w-full h-full object-cover' alt="" />
 
-      <div class="bg-white overflow-auto shadow rounded-lg z-[999] border w-[500px] h-[700px] mx-auto ">
+
+      <div class="bg-white mt-[200px] overflow-auto shadow rounded-lg z-[999] border w-[500px]  mx-auto ">
         <div class="px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">
             Əməkdaş Profili
@@ -74,7 +75,7 @@ const AdminTableDetails = () => {
                 Təlim günlərinin tarixi
               </dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                {user[0]?.vacationDays}
+                {/* {user[0]?.vacationDays} */}
               </dd>
             </div>
             <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -82,7 +83,7 @@ const AdminTableDetails = () => {
                 Xəstəlik günləri
               </dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                {user[0]?.sickDays}
+                {/* {user[0]?.sickDays} */}
               </dd>
             </div>
             <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -90,13 +91,13 @@ const AdminTableDetails = () => {
                 Təhsil məzuniyyət günləri
               </dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                {user[0]?.unpaidWorkingDays}
+                {/* {user[0]?.unpaidWorkingDays} */}
               </dd>
             </div>
           </dl>
         </div>
 
-      </div>
+      </div> 
     </div>
 
   )
