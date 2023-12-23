@@ -17,7 +17,7 @@ const AdminTable = () => {
             {
                 data?.map(user => {
                     return (
-                        <div className=" rounded overflow-hidden z-[999] h-[700px] w-full shadow-lg m-4" key={user.id}>
+                        <div className=" rounded overflow-auto z-[999] h-[700px] w-full shadow-lg m-4" key={user.id}>
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2 flex items-center gap-2">
                                     <div>Name: {user.firstName} {user.lastn}</div>
