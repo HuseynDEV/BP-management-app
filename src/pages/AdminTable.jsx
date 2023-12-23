@@ -12,12 +12,12 @@ const AdminTable = () => {
             .then(commits => setData(commits));
     }, [])
     return (
-        <div className='flex items-center h-full mx-auto flex-col justify-center w-[80%]'>
-                 {/* <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" /> */}
+        <div className='flex items-center h-screen mx-auto flex-col justify-center w-[80%]'>
+                 <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
             {
                 data?.map(user => {
                     return (
-                        <div className=" rounded overflow-hidden z-999 w-full shadow-lg m-4" key={user.id}>
+                        <div className=" rounded overflow-hidden z-[999] h-[700px] w-full shadow-lg m-4" key={user.id}>
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2 flex items-center gap-2">
                                     <div>Name: {user.firstName} {user.lastn}</div>

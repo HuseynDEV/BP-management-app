@@ -13,12 +13,12 @@ const AdminTableDetails = () => {
       .then(response => response.json())
       .then(commits => setUser(commits.filter(data => data.id === Number(id))));
 
-    // setUser(data.filter(data => data.id === Number(id)))
+    setUser(data.filter(data => data.id === Number(id)))
   }, [])
 
-  // setUser(datas.filter(data=>{
-  //   return data.id===idj
-  // }))
+  setUser(datas.filter(data=>{
+    return data.id===idj
+  }))
   const deleteButton = (item) => {
     fetch(`https://callous-knot-production.up.railway.app/api/v1/workers/${Number(item)}`, { method: 'DELETE' })
     console.log('error')
@@ -29,13 +29,13 @@ const AdminTableDetails = () => {
     console.log("")
   }
 
-  console.log(user[0]?.id)
+  // console.log(user[0]?.id)
 
   return (
-    <div className='flex items-center justify-center h-full'>
-      {/* <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" /> */}
+    <div className='flex items-center justify-center h-screen'>
+      <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
 
-      <div class="bg-white overflow-hidden shadow rounded-lg z-999 border w-[500px] mx-auto ">
+      <div class="bg-white overflow-hidden shadow rounded-lg z-[999] border w-[500px] h-[700px] mx-auto ">
         <div class="px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">
             Əməkdaş Profili
@@ -95,7 +95,6 @@ const AdminTableDetails = () => {
             </div>
           </dl>
         </div>
-        {/* <button onClick={() => deleteButton(user[0]?.id)}>delete</button> */}
 
       </div>
     </div>
