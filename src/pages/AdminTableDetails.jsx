@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import datas from '../data.json'
+import image from '../assets/halliburton.png'
+
 
 const AdminTableDetails = () => {
   let { id } = useParams()
@@ -16,19 +17,25 @@ const AdminTableDetails = () => {
   }, [])
 
   // setUser(datas.filter(data=>{
-  //   return data.id===id
+  //   return data.id===idj
   // }))
-
-  const deleteButton =  (item) => {
-     fetch(`https://callous-knot-production.up.railway.app/api/v1/workers/${Number(item)}`, { method: 'DELETE' })
+  const deleteButton = (item) => {
+    fetch(`https://callous-knot-production.up.railway.app/api/v1/workers/${Number(item)}`, { method: 'DELETE' })
     console.log('error')
+  }
+
+
+  const active = () => {
+    console.log("")
   }
 
   console.log(user[0]?.id)
 
   return (
     <div className='flex items-center justify-center h-screen'>
-      <div class="bg-white overflow-hidden shadow rounded-lg border w-[500px] mx-auto ">
+      <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
+
+      <div class="bg-white overflow-hidden shadow rounded-lg z-999 border w-[500px] mx-auto ">
         <div class="px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">
             Əməkdaş Profili
@@ -61,7 +68,7 @@ const AdminTableDetails = () => {
                 {user[0]?.trainingDays}
               </dd>
             </div>
-            
+
             <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt class="text-sm font-medium text-gray-500">
                 Təlim günlərinin tarixi

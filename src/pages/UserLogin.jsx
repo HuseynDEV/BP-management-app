@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import image from '../assets/halliburton.png'
+
 
 const UserLogin = () => {
   const [userId, setUserId] = useState(0)
   let {id}=useParams()
   return (
     <div className='flex items-center justify-center h-screen'>
-      {id}
-      <div class="w-full max-w-xs">
+            <img src={image} className='absolute w-full h-full -z-1 object-cover' alt="" />
+
+      <div class="w-full max-w-xs z-[999]">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
@@ -23,7 +26,7 @@ const UserLogin = () => {
       <p class="text-red-500 text-xs italic">Please choose a password.</p>
     </div> */}
           <div class="flex items-center justify-between">
-            <Link to={`/usertable/${userId}`} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            <Link to={`/usertable/${userId}`} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
               Keç
             </Link>
             {/* <Link to='/userregister' class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">

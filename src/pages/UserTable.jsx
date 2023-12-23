@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import image from '../assets/halliburton.png'
 
 
 const UserTable = () => {
@@ -23,7 +24,7 @@ const UserTable = () => {
         e.preventDefault();
         if (inputs.marineDaysOn.trim() === '' || inputs.trainingDays.trim() === '' ||
             inputs.sickDays.trim() === '' || inputs.vacationDays.trim() === '' || inputs.unpaidWorkingDays.trim() === ''
-            ) {
+        ) {
             setErrorMessage('Text input cannot be empty');
         } else {
             setErrorMessage('');
@@ -44,7 +45,7 @@ const UserTable = () => {
             unpaidWorkingDays: inputs.unpaidWorkingDays,
             username: "fuad",
             password: "54321",
-            educationalVacation:0
+            educationalVacation: 0
         }
 
         fetch(url, {
@@ -78,93 +79,98 @@ const UserTable = () => {
     React.useEffect(() => {
         console.log(inputs)
         setIsButtonDisabled(inputs.marineDaysOn.trim() === '' || inputs.trainingDays.trim() === "" ||
-            inputs.sickDays.trim() === '' || inputs.vacationDays.trim() === '' || inputs.unpaidWorkingDays.trim() === '' 
+            inputs.sickDays.trim() === '' || inputs.vacationDays.trim() === '' || inputs.unpaidWorkingDays.trim() === ''
             || inputs.unpaidWorkingDays.trim() === '')
     }, [inputs]);
     return (
-        <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-8 form-user">
+        <div className='flex items-center justify-center h-screen'>
 
-            <div className="mb-4">
-                <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
-                    Dənizdə iş günləri
-                </label>
-                <input
-                    type="number"
-                    id="numberInput"
-                    name='marineDaysOn'
-                    onChange={handleOnchange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
+            <img src={image} className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
 
-            </div>
+            <form onSubmit={handleSubmit} className="w-[400px] bg-white  p-5 rounded-lg mx-auto mt-8 form-user z-[999]">
+                <div className="mb-4 ">
+                    <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
+                        Dənizdə iş günləri
+                    </label>
+                    <input
+                        type="number"
+                        id="numberInput"
+                        name='marineDaysOn'
+                        onChange={handleOnchange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    />
 
-            <div className="mb-4">
-                <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
-                    Təlim günləri
-                </label>
-                <input
-                    type="number"
-                    id="numberInput"
-                    name='trainingDays'
-                    onChange={handleOnchange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
-            </div>
+                </div>
 
-            <div className="mb-4">
-                <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
-                    Xəstəlik günləri
-                </label>
-                <input
-                    type="number"
-                    id="numberInput"
-                    name='sickDays'
-                    onChange={handleOnchange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
-            </div>
+                <div className="mb-4 ">
+                    <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
+                        Təlim günləri
+                    </label>
+                    <input
+                        type="number"
+                        id="numberInput"
+                        name='trainingDays'
+                        onChange={handleOnchange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    />
+                </div>
 
-
-            <div className="mb-4">
-                <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
-                    Məzuniyyət günləri
-                </label>
-                <input
-                    type="number"
-                    id="numberInput"
-                    name='vacationDays'
-                    onChange={handleOnchange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
+                <div className="mb-4">
+                    <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
+                        Xəstəlik günləri
+                    </label>
+                    <input
+                        type="number"
+                        id="numberInput"
+                        name='sickDays'
+                        onChange={handleOnchange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    />
+                </div>
 
 
-            </div>
-
-            <div className="mb-4">
-                <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
-                    Ödənilməmiş iş günləri
-                </label>
-                <input
-                    type="number"
-                    id="numberInput"
-                    name='unpaidWorkingDays'
-                    onChange={handleOnchange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
+                <div className="mb-4">
+                    <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
+                        Məzuniyyət günləri
+                    </label>
+                    <input
+                        type="number"
+                        id="numberInput"
+                        name='vacationDays'
+                        onChange={handleOnchange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    />
 
 
-            </div>
+                </div>
 
-            <button
-                type="submit"
-                className={`w-full bg-indigo-500 text-white rounded-md py-2 px-4 ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''
-                    }`}
-                disabled={isButtonDisabled}
-                onClick={saveBtn}
-            >
-                Save
-            </button>
-        </form>
+                <div className="mb-4">
+                    <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
+                        Ödənilməmiş iş günləri
+                    </label>
+                    <input
+                        type="number"
+                        id="numberInput"
+                        name='unpaidWorkingDays'
+                        onChange={handleOnchange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    />
+
+
+                </div>
+
+                <button
+                    type="submit"
+                    className={`w-full bg-red-500 text-white rounded-md py-2 px-4 ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''
+                        }`}
+                    disabled={isButtonDisabled}
+                    onClick={saveBtn}
+                >
+                    Save
+                </button>
+            </form>
+        </div>
+
     )
 }
 

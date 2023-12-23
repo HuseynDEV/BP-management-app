@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import image from '../assets/halliburton.png'
 import { Link } from 'react-router-dom'
 
 
@@ -11,13 +11,13 @@ const AdminTable = () => {
             .then(response => response.json())
             .then(commits => setData(commits));
     }, [])
-    console.log(data)
     return (
-        <div className='flex items-center mx-auto flex-col justify-center w-[80%]'>
+        <div className='flex items-center h-screen mx-auto flex-col justify-center w-[80%]'>
+                 <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
             {
                 data?.map(user => {
                     return (
-                        <div className=" rounded overflow-hidden w-full shadow-lg m-4" key={user.id}>
+                        <div className=" rounded overflow-hidden z-999 w-full shadow-lg m-4" key={user.id}>
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2 flex items-center gap-2">
                                     <div>Name: {user.firstName} {user.lastn}</div>
