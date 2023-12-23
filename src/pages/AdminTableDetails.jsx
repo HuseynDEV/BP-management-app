@@ -32,8 +32,8 @@ const AdminTableDetails = () => {
   console.log(user[0]?.id)
 
   return (
-    <div className='flex items-center justify-center h-screen'>
-      <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
+    <div className='flex items-center justify-center h-full'>
+      {/* <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" /> */}
 
       <div class="bg-white overflow-hidden shadow rounded-lg z-999 border w-[500px] mx-auto ">
         <div class="px-4 py-5 sm:px-6">
