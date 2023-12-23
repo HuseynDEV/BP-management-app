@@ -13,7 +13,7 @@ const AdminTableDetails = () => {
       .then(response => response.json())
       .then(commits => setUser(commits.filter(data => data.id === Number(id))));
 
-    setUser(data.filter(data => data.id === Number(id)))
+    // setUser(data.filter(data => data.id === Number(id)))
   }, [])
 
  
