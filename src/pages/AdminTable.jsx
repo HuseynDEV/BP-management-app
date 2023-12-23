@@ -13,7 +13,7 @@ const AdminTable = () => {
     }, [])
     return (
         <div className='flex items-center h-screen mx-auto flex-col justify-center w-[80%]'>
-                 <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
+                 {/* <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" /> */}
             {
                 data?.map(user => {
                     return (
