@@ -12,15 +12,15 @@ const AdminLogin = () => {
     if (password === '40710') {
       navigate('/admintable')
     }
-   else{
-    alert('Xahiş olunur düzgün parolu daxil edin')
-   }
+    else {
+      alert('Xahiş olunur düzgün parolu daxil edin')
+    }
   }
 
   return (
 
 
-<div className='flex items-center justify-center h-screen'>
+    <div className='flex items-center justify-center h-screen'>
       <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
       <div className="w-full max-w-xs z-[999]">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
