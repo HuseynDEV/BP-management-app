@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import image from '../assets/halliburton.png'
+import Layout from '../components/Layout'
 
 const Home = () => {
     return (
-        <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
+       <Layout>
+         <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
             <img  src={image}  className='w-full object-cover h-full' alt="" />
             <div className='border-[1px] absolute bg-white rounded-lg w-[300px] p-3' >
                 <h1 className='text-[#CC0000]  text-3xl mb-6 text-center'>Welcome!</h1>
@@ -14,6 +16,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+       </Layout>
     )
 }
 
