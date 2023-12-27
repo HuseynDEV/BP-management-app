@@ -7,6 +7,8 @@ import AdminLogin from "./pages/AdminLogin"
 import UserTable from "./pages/UserTable"
 import AdminTable from "./pages/AdminTable"
 import AdminTableDetails from "./pages/AdminTableDetails"
+import Emails from "./pages/Emails"
+import Trainings from './pages/Trainings'
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -16,7 +18,9 @@ const router = createBrowserRouter([
   { path: "/adminlogin", element: <AdminLogin /> },
   { path: "/usertable/:id", element: <UserTable /> },
   { path: "/admintable", element: <AdminTable /> },
-  { path: "/admintable/:id", element: <AdminTableDetails /> }
+  { path: "/admintable/:id", element: <AdminTableDetails /> },
+  { path: "/emails", element: <Emails /> },
+  { path: "/trainings", element: <Trainings /> },
 ])
 
 function App() {

@@ -30,7 +30,7 @@ const UserLogin = () => {
       .then(response => response.json())
       .then(commits => {
         commits.filter(item => {
-          item.password === user.password && item.firstName === user.name && navigate(`/admintable/${item.id}`)
+          item.password === user.password && item.firstName === user.name && navigate(`/usertable/${item.id}`)
         })
       });
   }

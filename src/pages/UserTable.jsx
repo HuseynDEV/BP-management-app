@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import image from '../assets/halliburton.png'
 import Layout from '../components/Layout'
+import NavbarItems from '../components/NavbarItems'
 
 
 const UserTable = () => {
@@ -86,9 +87,9 @@ const UserTable = () => {
     return (
         <Layout>
             <div className='flex items-center justify-center h-screen'>
-                <nav></nav>
 
                 <img src={image} className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
+               <NavbarItems/>
 
                 <form onSubmit={handleSubmit} className="w-[400px] bg-white  p-5 rounded-lg mx-auto mt-8 form-user z-[999]">
                     <div className="mb-4 ">
