@@ -92,6 +92,7 @@ const UserTable = () => {
                <NavbarItems/>
 
                 <form onSubmit={handleSubmit} className="w-[400px] bg-white  p-5 rounded-lg mx-auto mt-8 form-user z-[999]">
+                    
                     <div className="mb-4 ">
                         <label htmlFor="numberInput" className="block text-sm font-medium text-gray-700">
                             Dənizdə iş günləri

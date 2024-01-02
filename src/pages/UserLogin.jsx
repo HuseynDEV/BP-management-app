@@ -7,18 +7,11 @@ import image from '../assets/halliburton.png'
 const UserLogin = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch('https://ragged-yak-production.up.railway.app/api/v1/workers')
-      .then(response => response.json())
-      .then(commits => console.log(commits));
-  }, [])
   const initialState = {
     name: "",
     password: ""
   }
   const [user, setUser] = useState(initialState)
-
-
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value })

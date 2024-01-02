@@ -9,6 +9,8 @@ import AdminTable from "./pages/AdminTable"
 import AdminTableDetails from "./pages/AdminTableDetails"
 import Emails from "./pages/Emails"
 import Trainings from './pages/Trainings'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment } from "./features/userSlice"
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -19,14 +21,19 @@ const router = createBrowserRouter([
   { path: "/usertable/:id", element: <UserTable /> },
   { path: "/admintable", element: <AdminTable /> },
   { path: "/admintable/:id", element: <AdminTableDetails /> },
+  { path: "/usertable/:id/emails", element: <Emails /> },
+  { path: "/usertable/:id/trainings", element: <Trainings /> },
   { path: "/emails", element: <Emails /> },
   { path: "/trainings", element: <Trainings /> },
 ])
 
 function App() {
+  const user = useSelector(state => state.users.isLoading)
+  console.log(user)
 
   return (
     < div >
+
       <RouterProvider router={router} />
     </div>
   )
