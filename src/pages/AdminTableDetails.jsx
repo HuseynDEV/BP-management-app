@@ -2,10 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import image from '../assets/halliburton.png'
 import Layout from '../components/Layout'
+import { useSelector, useDispatch } from 'react-redux'
+
+
+export const loader = async ({ params }) => {
+  const id = params.id
+
+
+}
 
 
 const AdminTableDetails = () => {
   let { id } = useParams()
+  let userId = useSelector(state => state.usersData.userID)
+
+  console.log(userId, 'userId')
+
 
   const [user, setUser] = useState([])
 
@@ -14,14 +26,14 @@ const AdminTableDetails = () => {
       .then(response => response.json())
       .then(commits => setUser(commits.filter(data => data.id === Number(id))));
 
-    // setUser(data.filter(data => data.id === Number(id)))
   }, [])
+  console.log(user, 'user')
 
 
-  const deleteButton = (item) => {
-    fetch(`https://ragged-yak-production.up.railway.app/api/v1/workers/${Number(item)}`, { method: 'DELETE' })
-    console.log('error')
-  }
+  // const deleteButton = (item) => {
+  //   fetch(`https://ragged-yak-production.up.railway.app/api/v1/workers/${Number(item)}`, { method: 'DELETE' })
+  //   console.log('error')
+  // }
 
 
   return (

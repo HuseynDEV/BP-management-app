@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import image from '../assets/halliburton.png'
+import { useSelector, useDispatch } from 'react-redux'
+import { addUserID } from '../features/userSlice'
 
 
 
 const UserLogin = () => {
   const navigate = useNavigate();
+  let userId = useSelector(state => state.usersData.userID)
+  const dispatch = useDispatch()
 
   const initialState = {
     name: "",
@@ -23,10 +27,16 @@ const UserLogin = () => {
       .then(response => response.json())
       .then(commits => {
         commits.filter(item => {
-          item.password === user.password && item.firstName === user.name && navigate(`/usertable/${item.id}`)
+          // item.password === user.password && item.firstName === user.name && navigate(`/usertable/${item.id}`)
+
+          if (item.password === user.password && item.firstName === user.name) {
+            navigate(`/usertable/${item.id}`)
+            dispatch(addUserID(item.id))
+          }
         })
       });
   }
+
 
   return (
 

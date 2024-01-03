@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react'
 import image from '../assets/halliburton.png'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchUser } from '../features/userSlice'
 
 
 
 const AdminTable = () => {
-    const [data, setData] = useState()
+    const dispatch = useDispatch()
+    const data = useSelector(state => state.usersData.users)
 
     useEffect(() => {
-        fetch('https://ragged-yak-production.up.railway.app/api/v1/workers')
-            .then(response => response.json())
-            .then(commits => setData(commits));
+        dispatch(fetchUser())
     }, [])
 
     return (
@@ -37,7 +38,7 @@ const AdminTable = () => {
                             </div>
                         )
                     })
-                }
+                } 
             </div>
         </Layout>
     )
