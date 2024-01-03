@@ -3,10 +3,13 @@ import { Link, useParams } from 'react-router-dom'
 import image from '../assets/halliburton.png'
 import Layout from '../components/Layout'
 import NavbarItems from '../components/NavbarItems'
+import { useSelector } from 'react-redux'
 
 
 const UserTable = () => {
     let { id } = useParams()
+  const userId = useSelector(state => state.usersData)
+console.log(userId, 'userID')
     const initialState = {
         marineDaysOn: "",
         trainingDays: "",
@@ -53,29 +56,22 @@ const UserTable = () => {
         fetch(url, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json', // Specify the content type if sending JSON data
-                // Add any other headers as needed
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data), // Convert the data to JSON format
+            body: JSON.stringify(data),
         })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok.');
                 }
-                // Handle the response data here if needed
                 return response.json();
             })
             .then(data => {
-                // Handle the data received from the server
-                console.log('POST request successful with response:', data);
                 alert("Əməliyyat uğurla başa çatdı")
             })
             .catch(error => {
-                // Handle errors here
                 console.error('There was a problem with the POST request:', error);
             });
-
-
     }
 
     React.useEffect(() => {

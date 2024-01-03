@@ -23,9 +23,9 @@ const Emails = () => {
                 <div className=' p-5 rounded-lg bg-white z-[999]  '>
                     {
                         datas.map(item => (
-                            <div className='my-4'>
+                            <div key={item.name} className='my-4'>
                                 <h3 className='font-bold'>{item.name} ({item.position})</h3>
-                                {item.email ? <h3>Email: <a className='font-bold text-blue-600 ' href={`mailto:${item.email}`} >{item.email}</a> </h3> : <h3>Linkedin: <a className='font-bold text-blue-600' href={`/${item.linkedin}`}>{item.linkedin}</a> </h3>}
+                                {item.email ? <h3>Email: <a target='_blank' className='font-bold text-blue-600 ' href={`mailto:${item.email}`} >{item.email}</a> </h3> : <h3>Linkedin: <a target='_blank' className='font-bold text-blue-600' href={`/${item.linkedin}`}>{item.linkedin}</a> </h3>}
                             </div>
                         ))
                     }
