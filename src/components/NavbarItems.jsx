@@ -16,12 +16,19 @@ const NavbarItems = () => {
                     <Link className='w-[200px] text-center  text-[#CC0000] font-medium text-3xl uppercase tracking-wide' to='/'>Halliburton</Link>
 
                 </div>
-                <div className='flex items-center gap-3 w-[70%]'>
-                    <Link className='  w-full text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
-                    <Link className='w-full  text-center text-[#CC0000] font-medium text-xl  whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
-                    <Link className='  w-full text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
-                    <Link className=' w-full text-center text-[#CC0000] font-medium text-xl' to='/emails'>Emails</Link>
-                    <Link className='  w-full text-center text-[#CC0000] font-medium text-xl' to='/trainings'>Trainings</Link>
+                <div className='flex items-center justify-end gap-10 w-[70%]'>
+                    {
+                        id && (
+                            <>
+                                <Link className='  = text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
+                                <Link className='=  text-center text-[#CC0000] font-medium text-xl  whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
+                                <Link className='   text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
+                            </>
+                        )
+                    }
+                    <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/raport'>Raport</Link>
+                    <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/emails'>Emails</Link>
+                    <Link className='   text-center text-[#CC0000] font-medium text-xl' to='/trainings'>Trainings</Link>
                 </div>
             </ul>
         </nav>

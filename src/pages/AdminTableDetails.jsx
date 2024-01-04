@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import image from '../assets/halliburton.png'
 import Layout from '../components/Layout'
 import { useSelector, useDispatch } from 'react-redux'
+import NavbarItems from '../components/NavbarItems'
 
 
 export const loader = async ({ params }) => {
@@ -37,7 +38,8 @@ const AdminTableDetails = () => {
 
 
   return (
-    <Layout>
+    <>
+      <NavbarItems />
       <div className='flex items-center justify-center w-full h-full bg-white'>
         <img src={image} className='absolute -z-1 top-0 bottom-0 w-full h-full object-cover' alt="" />
 
@@ -53,38 +55,38 @@ const AdminTableDetails = () => {
             <h3 className='mb-1'>Number: {user[0]?.number}</h3>
           </div>
           <div className="border-t border-gray-200  sm:p-5">
-                    <div className='flex items-center gap-5 mb-5'>
-                        <h3 className='w-[200px]'>Əməkdaşın adı:</h3>
-                        <p className='font-bold text-center '>{`${user[0]?.firstName}  ${user[0]?.lastname} `}</p>
-                    </div>
-                    <div className='flex items-center gap-5 mb-5'>
-                        <h3 className='w-[200px]'> Dənizdə iş günləri:</h3>
-                        <p className='font-bold text-center '> {user[0]?.marineDaysOn}</p>
-                    </div>
-                    <div className='flex items-center gap-5 mb-5'>
-                        <h3 className='w-[200px]'>Təlim günlərinin tarixi:</h3>
-                        <p className='font-bold text-center '>{user[0]?.trainingDays}</p>
-                    </div>
-                    <div className='flex items-center gap-5 mb-5'>
-                        <h3 className='w-[200px]'> Tətil günlərinin tarixi:</h3>
-                        <p className='font-bold text-center '>  {user[0]?.vacationDays}</p>
-                    </div>
-                    <div className='flex items-center gap-5 mb-5'>
-                        <h3 className='w-[200px]'>
-                            Xəstəlik günləri:
-                        </h3>
-                        <p className='font-bold text-center  '>{user[0]?.sickDays}</p>
-                    </div>
-                    <div className='flex items-center gap-5 mb-5'>
-                        <h3 className='w-[200px]'> Təhsil məzuniyyət günləri:</h3>
-                        <p className='font-bold text-center '>{user[0]?.unpaidWorkingDays}</p>
-                    </div>
+            <div className='flex items-center gap-5 mb-5'>
+              <h3 className='w-[200px]'>Əməkdaşın adı:</h3>
+              <p className='font-bold text-center '>{`${user[0]?.firstName}  ${user[0]?.lastname} `}</p>
+            </div>
+            <div className='flex items-center gap-5 mb-5'>
+              <h3 className='w-[200px]'> Dənizdə iş günləri:</h3>
+              <p className='font-bold text-center '> {user[0]?.marineDaysOn}</p>
+            </div>
+            <div className='flex items-center gap-5 mb-5'>
+              <h3 className='w-[200px]'>Təlim günlərinin tarixi:</h3>
+              <p className='font-bold text-center '>{user[0]?.trainingDays}</p>
+            </div>
+            <div className='flex items-center gap-5 mb-5'>
+              <h3 className='w-[200px]'> Tətil günlərinin tarixi:</h3>
+              <p className='font-bold text-center '>  {user[0]?.vacationDays}</p>
+            </div>
+            <div className='flex items-center gap-5 mb-5'>
+              <h3 className='w-[200px]'>
+                Xəstəlik günləri:
+              </h3>
+              <p className='font-bold text-center  '>{user[0]?.sickDays}</p>
+            </div>
+            <div className='flex items-center gap-5 mb-5'>
+              <h3 className='w-[200px]'> Təhsil məzuniyyət günləri:</h3>
+              <p className='font-bold text-center '>{user[0]?.unpaidWorkingDays}</p>
+            </div>
 
-                </div>
+          </div>
 
         </div>
       </div>
-    </Layout>
+    </>
 
   )
 }

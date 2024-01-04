@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchUser } from '../features/userSlice'
+import NavbarItems from '../components/NavbarItems'
 
 
 
@@ -16,8 +17,9 @@ const AdminTable = () => {
     }, [])
 
     return (
-        <Layout>
-            <div className='flex items-center mt-[100px] bg-white h-full mx-auto flex-col justify-center w-[80%]'>
+<>
+<NavbarItems/>
+<div className='flex items-center mt-[100px] bg-white h-full mx-auto flex-col justify-center w-[80%]'>
                 <img src={image} className=' top-0 -z-1 w-full h-full fixed object-cover' alt="" />
                 {
                     data?.map(user => {
@@ -40,7 +42,7 @@ const AdminTable = () => {
                     })
                 } 
             </div>
-        </Layout>
+</>
     )
 }
 

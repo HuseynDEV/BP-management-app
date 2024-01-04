@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import image from '../assets/halliburton.png'
-import Layout from '../components/Layout'
+import NavbarItems from '../components/NavbarItems'
 
 const Home = () => {
     return (
-       <Layout>
+      <>
+       <NavbarItems/>
          <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
             <img  src={image}  className='w-full object-cover h-full' alt="" />
             <div className='border-[1px] absolute bg-white rounded-lg w-[300px] p-3' >
@@ -16,7 +17,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-       </Layout>
+      </>
     )
 }
 
