@@ -30,7 +30,7 @@ const Profile = () => {
                     <h3 className="text-lg leading-6 font-medium text-gray-900">
                         Əməkdaş Profili
                     </h3>
-                    <h3 className='mt-1'>  Email: {user[0]?.email}</h3>
+                    <h3 className='mt-1'>Email: {user[0]?.email}</h3>
                     <h3 className='mb-1'>Number: {user[0]?.number}</h3>
                 </div>
                 <div className="border-t border-gray-200  sm:p-5">
