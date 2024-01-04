@@ -8,11 +8,10 @@ const Trainings = () => {
 
 
     return (
-        <Layout>
             <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
                 <NavbarItems />
                 <img src={image} className='w-full absolute top-0 object-cover h-full' alt="" />
-                <div className=' p-5  rounded-lg bg-white z-[999] h-[700px] overflow-auto w-[700px] mx-auto   '>
+                <div className=' p-5 mt-10  rounded-lg bg-white z-[999] h-[600px] overflow-auto w-[700px] mx-auto   '>
                     <h1 className='text-3xl mb-2 text-center w-full mx-auto'>Training Courses</h1>
                     <div className='border-b-[1px] pb-2 border-black relative ' >
                         <h2 className='font-bold text-2xl'>Introduction - Welcome to the Halliburton.</h2>
@@ -89,7 +88,6 @@ const Trainings = () => {
 
                 </div>
             </div>
-        </Layout>
     )
 }
 

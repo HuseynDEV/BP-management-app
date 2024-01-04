@@ -10,13 +10,26 @@ const NavbarItems = () => {
 
 
     return (
-        <nav className='fixed top-0 right-0 z-[999] bg-white flex items-center justify-center  h-[50px] px-4 '>
-            <ul className='flex items-center gap-4'>
-                <Link className='w-[200px] text-center text-[#CC0000] font-medium text-xl'>HOC/SWA</Link>
-                <Link className='w-[200px] text-center text-[#CC0000] font-medium text-xl'>Fikir ve iradlar</Link>
-                <Link className='w-[200px] text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
-                <Link className='w-[200px] text-center text-[#CC0000] font-medium text-xl' to='/emails'>Emails</Link>
-                <Link className='w-[200px] text-center text-[#CC0000] font-medium text-xl' to='/trainings'>Trainings</Link>
+        <nav className='fixed top-0 right-0 z-[999] w-full  bg-white  h-[50px] px-4 '>
+            <ul className='flex items-center justify-between h-full  mx-auto gap-5'>
+                <div className='w-[30%]'>
+                    <Link className='w-[200px] text-center  text-[#CC0000] font-medium text-3xl uppercase tracking-wide' to='/'>Halliburton</Link>
+
+                </div>
+                <div className='flex items-center justify-end gap-10 w-[70%]'>
+                    {
+                        id && (
+                            <>
+                                <Link className='  = text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
+                                <Link className='=  text-center text-[#CC0000] font-medium text-xl  whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
+                                <Link className='   text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
+                            </>
+                        )
+                    }
+                    <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/raport'>Raport</Link>
+                    <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/emails'>Emails</Link>
+                    <Link className='   text-center text-[#CC0000] font-medium text-xl' to='/trainings'>Trainings</Link>
+                </div>
             </ul>
         </nav>
     )

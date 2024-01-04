@@ -10,6 +10,9 @@ import AdminTableDetails from "../pages/AdminTableDetails"
 import Emails from "../pages/Emails"
 import Trainings from '../pages/Trainings'
 import React from 'react';
+import Comments from "../pages/Comments"
+import Profile from "../pages/Profile"
+import Raport from "../pages/Raport"
 
 const Router = () => {
     const BrowserRoutes = createBrowserRouter([
@@ -20,9 +23,12 @@ const Router = () => {
         { path: "/adminlogin", element: <AdminLogin /> },
         { path: "/usertable/:id", element: <UserTable /> },
         { path: "/admintable", element: <AdminTable /> },
-        { path: "/admintable/:id", element: <AdminTableDetails />},
+        { path: "/admintable/:id", element: <AdminTableDetails /> },
         { path: "/emails", element: <Emails /> },
-        { path: "/trainings", element: <Trainings /> }
+        { path: "/trainings", element: <Trainings /> },
+        { path: "/comments", element: <Comments /> },
+        { path: "/raport", element: <Raport /> },
+        { path: "/usertable/:id/profile", element: <Profile /> },
     ])
 
 

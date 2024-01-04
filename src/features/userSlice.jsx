@@ -12,7 +12,7 @@ export const userSlice = createSlice({
         isLoading: false,
         users: null,
         error: false,
-        userID: null
+        userID: null || localStorage.getItem('userId')
     },
     reducers: {
         increment: (state) => {

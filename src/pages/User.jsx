@@ -5,13 +5,11 @@ import Layout from '../components/Layout'
 
 const User = () => {
   return (
-   <Layout>
      <div>
       <div className='z-[999]'>
         <UserLogin />
       </div>
     </div>
-   </Layout>
   )
 }
 
