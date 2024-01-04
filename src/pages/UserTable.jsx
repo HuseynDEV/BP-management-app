@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import image from '../assets/halliburton.png'
-import Layout from '../components/Layout'
 import NavbarItems from '../components/NavbarItems'
 import { useSelector } from 'react-redux'
 
@@ -81,7 +80,6 @@ console.log(userId, 'userID')
             || inputs.unpaidWorkingDays.trim() === '')
     }, [inputs]);
     return (
-        <Layout>
             <div className='flex items-center justify-center h-screen'>
 
                 <img src={image} className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
@@ -171,7 +169,6 @@ console.log(userId, 'userID')
                     </button>
                 </form>
             </div>
-        </Layout>
 
     )
 }

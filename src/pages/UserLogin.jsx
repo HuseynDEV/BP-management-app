@@ -27,10 +27,9 @@ const UserLogin = () => {
       .then(response => response.json())
       .then(commits => {
         commits.filter(item => {
-          // item.password === user.password && item.firstName === user.name && navigate(`/usertable/${item.id}`)
-
           if (item.password === user.password && item.firstName === user.name) {
             navigate(`/usertable/${item.id}`)
+            localStorage.setItem('userId', item.id)
             dispatch(addUserID(item.id))
           }
         })
