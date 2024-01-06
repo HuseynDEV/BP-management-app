@@ -3,17 +3,22 @@ import NavbarItems from '../components/NavbarItems'
 import image from '../assets/halliburton.png'
 import {  useNavigate } from 'react-router-dom'
 import {toast} from 'react-toastify'
+import {useDispatch} from 'react-redux'
+import { addForeman } from '../features/userSlice'
 
 
 
 const ForeMan = () => {
     const [password, setPassword] = useState()
     const navigate = useNavigate()
+    const dispatch=useDispatch()
   
     const handleRoute = (e) => {
         e.preventDefault()
       if (password === 'halliburton123') {
         navigate('/raport')
+        dispatch(addForeman(true))
+        localStorage.setItem('foreman', true)
         toast.success('Success', {
             position: "top-center",
             autoClose: 3000,
