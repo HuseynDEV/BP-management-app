@@ -1,5 +1,60 @@
 {
-    "rewrites":[
-        {"source":"/(.*)", "destination":"/"}
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/user",
+            "dest": "/"
+        },
+        {
+            "src": "/foreman",
+            "dest": "/"
+        },
+        {
+            "src": "/admin",
+            "dest": "/"
+        },
+        {
+            "src": "/userlogin",
+            "dest": "/"
+        },
+        {
+            "src": "/adminlogin",
+            "dest": "/"
+        },
+        {
+            "src": "/usertable/:id",
+            "dest": "/"
+        },
+        {
+            "src": "/admintable",
+            "dest": "/"
+        },
+        {
+            "src": "/admintable/:id",
+            "dest": "/"
+        },
+        {
+            "src": "/emails",
+            "dest": "/"
+        },
+        {
+            "src": "/trainings",
+            "dest": "/"
+        },
+        {
+            "src": "/comments",
+            "dest": "/"
+        },
+        {
+            "src": "/raport",
+            "dest": "/"
+        },
+        {
+            "src": "/usertable/:id/profile",
+            "dest": "/"
+        }
     ]
 }
