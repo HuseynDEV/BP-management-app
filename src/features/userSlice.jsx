@@ -28,6 +28,11 @@ export const userSlice = createSlice({
         logoutForeman:(state)=>{
             state.foreman=false
             localStorage.removeItem('foreman')
+        },
+        logoutUser:(state)=>{
+            state.userID=null
+            localStorage.removeItem('userId')
+
         }
     },
     extraReducers: (builder) => {
@@ -45,5 +50,5 @@ export const userSlice = createSlice({
 
 })
 
-export const { increment, addUserID,addForeman,logoutForeman } = userSlice.actions
+export const { increment, addUserID,addForeman,logoutForeman, logoutUser } = userSlice.actions
 export default userSlice.reducer

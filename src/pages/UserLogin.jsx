@@ -3,6 +3,8 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 import image from '../assets/halliburton.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { addUserID } from '../features/userSlice'
+import {toast} from 'react-toastify'
+
 
 
 
@@ -31,6 +33,16 @@ const UserLogin = () => {
             navigate(`/usertable/${item.id}`)
             localStorage.setItem('userId', item.id)
             dispatch(addUserID(item.id))
+            toast.success('Success', {
+              position: "top-center",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
           }
         })
       });
