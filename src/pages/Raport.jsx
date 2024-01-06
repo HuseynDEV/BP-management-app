@@ -69,7 +69,7 @@ const Raport = () => {
         <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
             <NavbarItems />
             <img src={image} className='absolute  -z-1 w-full object-cover h-full' alt="" />
-            <div className=' p-5 rounded-lg bg-white z-[999] w-[90%] h-[500px]  mx-auto overflow-auto'>
+            <div className=' p-5 rounded-lg bg-white z-[999] w-[90%] h-[520px]  mx-auto overflow-auto'>
 
                 <div className='flex items-center gap-3'>
                     <input type="file" onChange={(e) => handleUpload(e)} />
