@@ -5,7 +5,7 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { addDoc, collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import NavbarItems from '../components/NavbarItems';
 import image from '../assets/halliburton.png'
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 
 const Raport = () => {
     const [productName, setProductName] = useState('')
@@ -35,7 +35,7 @@ const Raport = () => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
     }
 
     const getData = async () => {
@@ -48,7 +48,7 @@ const Raport = () => {
     const handleDelete = async (id) => {
         const docRef = doc(txtDB, 'txtData', id);
         await deleteDoc(docRef);
-        getData(); 
+        getData();
         toast.success('Deleted', {
             position: "top-center",
             autoClose: 3000,
@@ -58,7 +58,7 @@ const Raport = () => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
     };
 
     useEffect(() => {
@@ -69,7 +69,7 @@ const Raport = () => {
         <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
             <NavbarItems />
             <img src={image} className='absolute  -z-1 w-full object-cover h-full' alt="" />
-            <div className=' p-5 rounded-lg bg-white z-[999] w-[90%]  mx-auto overflow-auto'>
+            <div className=' p-5 rounded-lg bg-white z-[999] w-[90%] h-[500px]  mx-auto overflow-auto'>
 
                 <div className='flex items-center gap-3'>
                     <input type="file" onChange={(e) => handleUpload(e)} />
