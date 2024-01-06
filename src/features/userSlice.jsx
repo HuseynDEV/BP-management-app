@@ -12,7 +12,8 @@ export const userSlice = createSlice({
         isLoading: false,
         users: null,
         error: false,
-        userID: null || localStorage.getItem('userId')
+        userID: null || localStorage.getItem('userId'),
+        foreman:null || localStorage.getItem('foreman')
     },
     reducers: {
         increment: (state) => {
@@ -20,6 +21,13 @@ export const userSlice = createSlice({
         },
         addUserID: (state, action) => {
             state.userID = action.payload
+        },
+        addForeman:(state, action)=>{
+            state.foreman=action.payload
+        },
+        logoutForeman:(state)=>{
+            state.foreman=false
+            localStorage.removeItem('foreman')
         }
     },
     extraReducers: (builder) => {
@@ -37,5 +45,5 @@ export const userSlice = createSlice({
 
 })
 
-export const { increment, addUserID } = userSlice.actions
+export const { increment, addUserID,addForeman,logoutForeman } = userSlice.actions
 export default userSlice.reducer

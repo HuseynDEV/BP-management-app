@@ -76,9 +76,8 @@ const Raport = () => {
                     <input className='border-[1px] border-black h-[30px] placeholder:text-black' placeholder='Product Name' type='text' onChange={(e) => setProductName(e.target.value)} />
                     <input className='border-[1px] border-black h-[30px] placeholder:text-black' placeholder='Product Quantity' type='number' onChange={(e) => setProductQuantity(e.target.value)} />
                     <button onClick={handleClick} className='w-[150px] h-[32px] rounded-md bg-[#CC0000] text-white'>Add</button>
-
                 </div>
-                <div className='mt-5 grid grid-cols-4 gap-3 '>
+                <div className='mt-5 grid grid-cols-4  gap-3 '>
                     {
                         data.map(value => {
                             return (

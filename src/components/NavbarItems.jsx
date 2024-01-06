@@ -1,13 +1,21 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { logoutForeman } from '../features/userSlice'
 
 
 
 const NavbarItems = () => {
     const navigate = useNavigate();
     let id = useSelector(state => state.usersData.userID)
+    let foreman = useSelector(state => state.usersData.foreman)
+    const dispatch = useDispatch()
 
+
+    const handleLogout = () => {
+        dispatch(logoutForeman())
+        navigate('/')
+    }
 
     return (
         <nav className='fixed top-0 right-0 z-[999] w-full  bg-white  h-[50px] px-4 '>
@@ -26,7 +34,15 @@ const NavbarItems = () => {
                             </>
                         )
                     }
-                    <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/raport'>Raport</Link>
+                    {
+                        foreman && (
+                            <>
+                                <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/raport'>Raport</Link>
+                                <button onClick={handleLogout} className='  text-center text-[#CC0000] font-medium text-xl' to='/'>Logout</button>
+                            </>
+                        )
+
+                    }
                     <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/emails'>Emails</Link>
                     <Link className='   text-center text-[#CC0000] font-medium text-xl' to='/trainings'>Trainings</Link>
                 </div>
