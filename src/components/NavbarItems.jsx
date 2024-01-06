@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { logoutForeman } from '../features/userSlice'
+import { logoutForeman, logoutUser } from '../features/userSlice'
 
 
 
@@ -14,6 +14,10 @@ const NavbarItems = () => {
 
     const handleLogout = () => {
         dispatch(logoutForeman())
+        navigate('/')
+    }
+    const handleLogoutUser = () => {
+        dispatch(logoutUser())
         navigate('/')
     }
 
@@ -31,6 +35,8 @@ const NavbarItems = () => {
                                 <Link className='  = text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
                                 <Link className='=  text-center text-[#CC0000] font-medium text-xl  whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
                                 <Link className='   text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
+                                <button onClick={handleLogoutUser} className='  text-center text-[#CC0000] font-medium text-xl' to='/'>Logout</button>
+
                             </>
                         )
                     }
