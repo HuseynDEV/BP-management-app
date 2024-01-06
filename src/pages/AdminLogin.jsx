@@ -31,7 +31,8 @@ const AdminLogin = () => {
             <input onChange={(e) => setPassword(e.target.value)} className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
           </div>
           <div className="flex items-center justify-between">
-            <Link onClick={handleRoute} >Daxil Ol</Link>
+            <button className='bg-[#CC0000] text-white -mt-5 px-5 py-2 rounded-md' onClick={handleRoute} >Daxil Ol</button>
+
           </div>
         </form>
 

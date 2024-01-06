@@ -1,11 +1,11 @@
 import React from 'react'
 import UserLogin from './UserLogin'
-import Layout from '../components/Layout'
-
+import NavbarItems from '../components/NavbarItems'
 
 const User = () => {
   return (
      <div>
+      <NavbarItems/>
       <div className='z-[999]'>
         <UserLogin />
       </div>

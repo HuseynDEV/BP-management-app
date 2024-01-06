@@ -13,11 +13,13 @@ import React from 'react';
 import Comments from "../pages/Comments"
 import Profile from "../pages/Profile"
 import Raport from "../pages/Raport"
+import ForeMan from "../pages/ForeMan"
 
 const Router = () => {
     const BrowserRoutes = createBrowserRouter([
         { path: "/", element: <Home /> },
         { path: "/user", element: <User /> },
+        { path: "/foreman", element: <ForeMan /> },
         { path: "/admin", element: <Admin /> },
         { path: "/userlogin", element: <UserLogin /> },
         { path: "/adminlogin", element: <AdminLogin /> },

@@ -14,6 +14,7 @@ const Home = () => {
                 <div className='flex flex-col gap-3'>
                     <Link to='admin' className='border-[1px] h-[40px] text-center leading-[40px] w-[90%] mx-auto border-black  rounded-lg'>Admin</Link>
                     <Link to='user' className='border-[1px] h-[40px] text-center leading-[40px] border-black  w-[90%] mx-auto  rounded-lg'>User</Link>
+                    <Link to='foreman' className='border-[1px] h-[40px] text-center leading-[40px] border-black  w-[90%] mx-auto  rounded-lg'>Foreman</Link>
                 </div>
             </div>
         </div>
