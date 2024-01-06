@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'laptop': '1600px'
+    },
     extend: {},
   },
   plugins: [],
