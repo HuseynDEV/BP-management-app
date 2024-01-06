@@ -17,7 +17,6 @@ const AdminTableDetails = () => {
   let { id } = useParams()
   let userId = useSelector(state => state.usersData.userID)
 
-  console.log(userId, 'userId')
 
 
   const [user, setUser] = useState([])
@@ -28,7 +27,6 @@ const AdminTableDetails = () => {
       .then(commits => setUser(commits.filter(data => data.id === Number(id))));
 
   }, [])
-  console.log(user, 'user')
 
 
   // const deleteButton = (item) => {
@@ -54,7 +52,7 @@ const AdminTableDetails = () => {
             <h3 className='mt-1'>  Email: {user[0]?.email}</h3>
             <h3 className='mb-1'>Number: {user[0]?.number}</h3>
           </div>
-          <div className="border-t border-gray-200  sm:p-5">
+          <div className="border-t border-gray-200  p-5">
             <div className='flex items-center gap-5 mb-5'>
               <h3 className='w-[200px]'>Əməkdaşın adı:</h3>
               <p className='font-bold text-center '>{`${user[0]?.firstName}  ${user[0]?.lastname} `}</p>

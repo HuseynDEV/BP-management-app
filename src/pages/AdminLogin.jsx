@@ -1,19 +1,40 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import image from '../assets/halliburton.png'
-import Layout from '../components/Layout'
+import {toast} from 'react-toastify'
+
 
 
 const AdminLogin = () => {
   const [password, setPassword] = useState()
   const navigate = useNavigate()
 
-  const handleRoute = () => {
+  const handleRoute = (e) => {
+    e.preventDefault()
     if (password === '40710') {
       navigate('/admintable')
+      toast.success('Success', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
    else{
-    alert('Xahiş olunur düzgün parolu daxil edin')
+    toast.error('Failed', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
    }
   }
 
@@ -23,7 +44,8 @@ const AdminLogin = () => {
 <div className='flex items-center justify-center h-screen'>
       <img src={image} className='absolute -z-1 w-full h-full object-cover' alt="" />
       <div className="w-full max-w-xs z-[999]">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+     
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"  >
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
               Password
