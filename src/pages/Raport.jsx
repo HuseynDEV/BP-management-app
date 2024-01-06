@@ -15,7 +15,6 @@ const Raport = () => {
 
 
     const handleUpload = (e) => {
-        console.log(e.target.files[0])
         const imgs = ref(imgDB, `Imgs/${v4()}`)
         uploadBytes(imgs, e.target.files[0]).then(data => {
             getDownloadURL(data.ref).then(val => {

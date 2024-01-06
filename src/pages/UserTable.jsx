@@ -3,12 +3,13 @@ import { useParams } from 'react-router-dom'
 import image from '../assets/halliburton.png'
 import NavbarItems from '../components/NavbarItems'
 import { useSelector } from 'react-redux'
+import {toast} from 'react-toastify'
+
 
 
 const UserTable = () => {
     let { id } = useParams()
   const userId = useSelector(state => state.usersData)
-console.log(userId, 'userID')
     const initialState = {
         marineDaysOn: "",
         trainingDays: "",
@@ -66,7 +67,16 @@ console.log(userId, 'userID')
                 return response.json();
             })
             .then(data => {
-                alert("Əməliyyat uğurla başa çatdı")
+                toast.success('Added', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
             })
             .catch(error => {
                 console.error('There was a problem with the POST request:', error);
@@ -74,7 +84,6 @@ console.log(userId, 'userID')
     }
 
     React.useEffect(() => {
-        console.log(inputs)
         setIsButtonDisabled(inputs.marineDaysOn.trim() === '' || inputs.trainingDays.trim() === "" ||
             inputs.sickDays.trim() === '' || inputs.vacationDays.trim() === '' || inputs.unpaidWorkingDays.trim() === ''
             || inputs.unpaidWorkingDays.trim() === '')

@@ -19,10 +19,6 @@ const FormComponent = () => {
     if (textInput.trim() === '') {
       setErrorMessage('Text input cannot be empty');
     } else {
-      // Handle form submission here
-      console.log('Number Input:', numberInput);
-      console.log('Text Input:', textInput);
-      // Clear inputs and error message after successful submission
       setNumberInput('');
       setTextInput('');
       setErrorMessage('');

@@ -15,7 +15,6 @@ const Profile = () => {
 
     }, [])
 
-    console.log(user)
 
     return (
         <div className='flex items-center justify-center h-screen'>
@@ -33,7 +32,7 @@ const Profile = () => {
                     <h3 className='mt-1'>Email: {user[0]?.email}</h3>
                     <h3 className='mb-1'>Number: {user[0]?.number}</h3>
                 </div>
-                <div className="border-t border-gray-200  sm:p-5">
+                <div className="border-t border-gray-200  p-5">
                     <div className='flex items-center gap-5 mb-5'>
                         <h3 className='w-[200px]'>Əməkdaşın adı:</h3>
                         <p className='font-bold text-center '>{`${user[0]?.firstName}  ${user[0]?.lastname} `}</p>
