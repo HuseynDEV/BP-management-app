@@ -22,7 +22,7 @@ const NavbarItems = () => {
     }
 
     return (
-        <nav className='fixed top-0 right-0 z-[999] w-full  bg-white  h-[50px] px-4 '>
+        <nav className='fixed top-0 right-0 z-20 w-full  bg-white  h-[50px] px-4 '>
             <ul className='flex items-center justify-between h-full  mx-auto gap-5'>
                 <div className='w-[30%]'>
                     <Link className='w-[200px] text-center  text-[#CC0000] font-medium text-3xl uppercase tracking-wide' to='/'>Halliburton</Link>

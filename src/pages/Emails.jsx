@@ -20,8 +20,8 @@ const Emails = () => {
                 <img src={image} className='absolute  -z-1 w-full object-cover h-full' alt="" />
                 <div className=' p-5 rounded-lg bg-white z-[999]  '>
                     {
-                        datas.map(item => (
-                            <div key={item.name} className='my-4'>
+                        datas.map((item,index) => (
+                            <div key={index} className='my-4'>
                                 <h3 className='font-bold'>{item.name} ({item.position})</h3>
                                 {item.email ? <h3>Email: <a target='_blank' className='font-bold text-blue-600 ' href={`mailto:${item.email}`} >{item.email}</a> </h3> : <h3>Linkedin: <a target='_blank' className='font-bold text-blue-600' href={item.linkedin}>{item.linkedin}</a> </h3>}
                             </div>
