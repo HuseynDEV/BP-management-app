@@ -22,36 +22,44 @@ const NavbarItems = () => {
     }
 
     return (
-        <nav className='fixed top-0 right-0 z-20 w-full  bg-white  h-[50px] px-4 '>
+        <nav className='fixed top-0 right-0 z-20 w-full  bg-white   h-[70px] px-4 '>
             <ul className='flex items-center justify-between h-full  mx-auto gap-5'>
                 <div className='w-[30%]'>
-                    <Link className='w-[200px] text-center  text-[#CC0000] font-medium text-3xl uppercase tracking-wide' to='/'>Halliburton</Link>
-
+                    <Link className='w-[200px] text-center  text-[#007F00] font-medium text-3xl uppercase tracking-wide' to='/'>
+                        <img src="https://www.bp.com/apps/settings/wcm/designs/refresh/bp/images/navigation/bp-logo.svg" alt="" className='w-[60px] h-[60px]' />
+                    </Link>
                 </div>
-                <div className='flex items-center justify-end gap-10 w-[70%]'>
-                    {
-                        id && (
-                            <>
-                                <Link className='  = text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
-                                <Link className='=  text-center text-[#CC0000] font-medium text-xl  whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
-                                <Link className='   text-center text-[#CC0000] font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
-                                <button onClick={handleLogoutUser} className='  text-center text-[#CC0000] font-medium text-xl' to='/'>Logout</button>
+                    <div className='flex items-center justify-end gap-10 w-[70%]'>
+                        {
+                            id && (
+                                <div  className='text-black'  >
+                                    <Link className='  = text-center hover:text-white  hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
+                                    <Link className='=  text-center hover:text-white  hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl  whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
+                                    <Link className='   text-center hover:text-white  hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
+                                    <button onClick={handleLogoutUser} className='  text-center text-[#007F00] font-medium text-xl hover:text-white  hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block' to='/'>Logout</button>
 
-                            </>
-                        )
-                    }
-                    {
-                        foreman && (
-                            <>
-                                <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/raport'>Raport</Link>
-                                <button onClick={handleLogout} className='  text-center text-[#CC0000] font-medium text-xl' to='/'>Logout</button>
-                            </>
-                        )
+                                </div>
+                            )
+                        }
+                        {
+                            foreman && (
+                                <>
+                                    <Link className='  text-center text-black hover:text-white  hover:bg-[#007F00] font-medium text-xl h-[70px] leading-[70px] px-4 block' to='/raport'>Raport</Link>
+                                    <button onClick={handleLogout} className='  text-center text-black font-medium text-xl hover:text-white  hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block' to='/'>Logout</button>
+                                </>
+                            )
 
-                    }
-                    <Link className='  text-center text-[#CC0000] font-medium text-xl' to='/emails'>Emails</Link>
-                    <Link className='   text-center text-[#CC0000] font-medium text-xl' to='/trainings'>Trainings</Link>
-                </div>
+                        }
+                        <Link className='  text-center text-black hover:bg-[#007F00] hover:text-white h-[70px] leading-[70px] px-6 block font-medium text-xl' to='/emails'>Emails</Link>
+                        <Link className='   text-center text-black hover:bg-[#007F00] hover:text-white h-[70px] leading-[70px] px-4 block font-medium text-xl' to='/trainings'>Trainings</Link>
+                    </div>
+
+                {/* <div className='md:hidden block'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+                </div> */}
             </ul>
         </nav>
     )

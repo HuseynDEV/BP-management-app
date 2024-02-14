@@ -15,9 +15,9 @@ const Raport = () => {
 
 
 
-    const mainImage = useRef(null)
+    const mainImage = useRef([])
 
-
+    mainImage.current = []
 
     const handleUpload = (e) => {
         const files = Array.from(e.target.files);
@@ -79,19 +79,30 @@ const Raport = () => {
 
 
 
-    const handleImage = (e) => {
-        console.log()
-        mainImage.current.src = e.target.src
+    const handleImage = (e, index) => {
+        console.log(
+            mainImage.current[index].src = e.target.src
+        )
     }
 
 
+
+    const addToRef = (el) => {
+        if (el && !mainImage.current.includes(el)) {
+            mainImage.current.push(el)
+        }
+    }
+
+
+
+
     return (
-        <div className='flex items-center justify-center h-full bg-[#CC0000]'>
-            <NavbarItems  />
+        <div className='flex items-center justify-center h-full bg-[#007F00]'>
+            <NavbarItems />
             <img src={image} className='absolute top-0 left-0 bottom-0 -z-1 w-full object-cover h-[100%]' alt='' />
             <div className='p-5 z-10 md:mt-[500px] mt-[100px] rounded-lg bg-white  w-[90%]  mx-auto overflow-auto'>
                 <div className='md:inline-flex     md:items-center gap-3'>
-                    <input type='file'  multiple onChange={(e) => handleUpload(e)} />
+                    <input type='file' multiple onChange={(e) => handleUpload(e)} />
                     <input
                         className='border-[1px] m-2 border-black h-[30px] placeholder:text-black'
                         placeholder='Product Name'
@@ -104,12 +115,12 @@ const Raport = () => {
                         type='number'
                         onChange={(e) => setProductQuantity(e.target.value)}
                     />
-                    <button onClick={handleClick} className='w-[150px] m-2 h-[32px] rounded-md bg-[#CC0000] text-white'>
+                    <button onClick={handleClick} className='w-[150px] m-2 h-[32px] rounded-md bg-[#007F00] text-white'>
                         Add
                     </button>
                 </div>
                 <div className='mt-5 flex flex-wrap gap-3'>
-                    {data.map((value) => {
+                    {data.map((value, index2) => {
                         return (
                             <div className='border-[1px] rounded-md border-black p-3' key={value.id}>
                                 <div className='text-xl font-bold'>
@@ -125,9 +136,9 @@ const Raport = () => {
                                                                                                                                 
                                     } */}
                                     <div className=''>
-                                        <img key='12' ref={mainImage} className={`w-[300px] h-[250px] rounded-md object-cover`} src={value.imgUrls[0]} alt='' />
+                                        <img key='12' ref={addToRef} className={`w-[300px] h-[250px] rounded-md object-cover`} src={value.imgUrls[0]} alt='' />
                                         {value.imgUrls.map((url, index) => (
-                                            <div key={index} className='inline-flex mx-1 mt-2 items-center'> <img  onClick={handleImage} className={`image${index} inline-flex w-[40px] h-[40px] rounded-md object-cover`} src={url} alt='' /></div>
+                                            <div key={index} className='inline-flex mx-1 mt-2 items-center'> <img onClick={(e) => handleImage(e, index2)} className={`image${index} inline-flex w-[40px] h-[40px] rounded-md object-cover`} src={url} alt='' /></div>
                                         ))}
                                     </div>
                                 </div>

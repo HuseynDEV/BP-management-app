@@ -15,7 +15,7 @@ const Emails = () => {
         { name: 'Vusala Akbarova', position: "Area HR Business Partner Manager/Caspian", email: 'Vusala.Akbarova@halliburton.com' }
     ]
     return (
-            <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
+            <div className='flex items-center justify-center h-screen mt-5 overflow-hidden'>
                 <NavbarItems />
                 <img src={image} className='absolute  -z-1 w-full object-cover h-full' alt="" />
                 <div className=' p-5 rounded-lg bg-white z-[999]  '>
