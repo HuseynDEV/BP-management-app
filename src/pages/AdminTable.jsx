@@ -35,7 +35,7 @@ const AdminTable = () => {
 
                                     </div>
 
-                                    <Link to={`/admintable/${user.id}`} type='button' className='mt-3 border-[1px] px-4 py-1 rounded-lg text-white bg-[#CC0000]'>Details</Link>
+                                    <Link to={`/admintable/${user.id}`} type='button' className='mt-3 border-[1px] px-4 py-1 rounded-lg text-white bg-[#007F00]'>Details</Link>
                                 </div>
                             </div>
                         )

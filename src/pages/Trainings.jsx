@@ -8,14 +8,14 @@ const Trainings = () => {
 
 
     return (
-            <div className='flex items-center justify-center h-screen bg-[#CC0000]'>
+            <div className='flex items-center justify-center h-screen  mt-5'>
                 <NavbarItems />
-                <img src={image} className='w-full absolute top-0 object-cover h-full' alt="" />
+                <img src={image} className='w-full fixed top-0 object-cover h-full' alt="" />
                 <div className=' p-5 mt-10  rounded-lg bg-white z-[999] h-[600px] overflow-auto w-[700px] mx-auto   '>
                     <h1 className='text-3xl mb-2 text-center w-full mx-auto'>Training Courses</h1>
                     <div className='border-b-[1px] pb-2 border-black relative ' >
                         <h2 className='font-bold text-2xl'>Introduction - Welcome to the Halliburton.</h2>
-                        <h2 className=' mb-3 text-[#CC0000] font-bold text-2xl'>About Halliburton</h2>
+                        <h2 className=' mb-3 text-[#007F00] font-bold text-2xl'>About Halliburton</h2>
                         <a className='block text-blue-600 font-bold' href="https://youtu.be/DLGzUT-pV8o?si=GpSYNcp5UEB5wmRl">Video 1</a>
                         <a className='block text-blue-600 font-bold' href="https://youtu.be/npIksocXHCs?si=201GFcxwjPG7lCzH">Video 2</a>
                         <p className='mt-2'>
@@ -60,7 +60,7 @@ const Trainings = () => {
                     </div>
 
 
-                    <h1 className='text-3xl mb-2 text-center pt-4 w-full mx-auto text-[#CC0000] font-bold'>OVERALL KNOWLEDGE</h1>
+                    <h1 className='text-3xl mb-2 text-center pt-4 w-full mx-auto text-[#007F00] font-bold'>OVERALL KNOWLEDGE</h1>
 
                     <div className='border-b-[1px] pb-2 border-black'>
                         <h2 className='font-bold text-2xl mb-2'>Drilling course:</h2>
