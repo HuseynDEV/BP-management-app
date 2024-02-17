@@ -65,7 +65,9 @@ const Archive = () => {
             <div className='p-5 z-10 md:mt-[500px] mt-[100px] rounded-lg bg-white  w-[90%]  mx-auto overflow-auto'>
                 
                 <div className='mt-5 flex flex-wrap gap-3'>
-                    {data.map((value, index2) => {
+                
+                    { !data.length ? <h1 className='text-3xl text-center w-full text-[#007F00]'>Don't have a any data</h1>:
+                    data.map((value, index2) => {
                         return (
                             <div className='border-[1px] rounded-md border-black p-3' key={value.id}>
                                 <div className='text-xl font-bold'>
