@@ -20,7 +20,7 @@ const AdminTable = () => {
 <>
 <NavbarItems/>
 <div className='flex items-center mt-[100px] bg-white h-full mx-auto flex-col justify-center w-[80%]'>
-                <img src={image} className=' top-0 -z-1 w-full h-full fixed object-cover' alt="" />
+                <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className=' top-0 -z-1 w-full h-full fixed object-cover' alt="" />
                 {
                     data?.map((user,index) => {
                         return (

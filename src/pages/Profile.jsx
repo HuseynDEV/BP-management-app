@@ -19,7 +19,7 @@ const Profile = () => {
     return (
         <div className='flex items-center justify-center h-screen'>
 
-            <img src={image} className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
+            <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
             <NavbarItems />
 
             <div className="bg-white mt-[110px] overflow-auto shadow rounded-lg z-[999] border w-[500px]  mx-auto ">

@@ -14,6 +14,7 @@ import Comments from "../pages/Comments"
 import Profile from "../pages/Profile"
 import Raport from "../pages/Raport"
 import ForeMan from "../pages/ForeMan"
+import Archive from "../pages/Archive"
 
 const Router = () => {
     const BrowserRoutes = createBrowserRouter([
@@ -30,6 +31,7 @@ const Router = () => {
         { path: "/trainings", element: <Trainings /> },
         { path: "/comments", element: <Comments /> },
         { path: "/raport", element: <Raport /> },
+        { path: "/archive", element: <Archive /> },
         { path: "/usertable/:id/profile", element: <Profile /> },
     ])
 

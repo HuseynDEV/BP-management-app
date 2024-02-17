@@ -39,7 +39,7 @@ const AdminTableDetails = () => {
     <>
       <NavbarItems />
       <div className='flex items-center justify-center w-full h-full bg-white'>
-        <img src={image} className='absolute -z-1 top-0 bottom-0 w-full h-full object-cover' alt="" />
+        <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className='absolute -z-1 top-0 bottom-0 w-full h-full object-cover' alt="" />
 
 
         <div className="bg-white mt-[110px] overflow-auto shadow rounded-lg z-[999] border w-[500px]  mx-auto ">

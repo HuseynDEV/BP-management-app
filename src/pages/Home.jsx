@@ -8,7 +8,7 @@ const Home = () => {
       <>
        <NavbarItems/>
          <div className='flex items-center justify-center h-screen bg-[#007F00]'>
-            <img  src={image}  className='w-full object-cover h-full' alt="" />
+            <img  src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg'  className='w-full object-cover h-full' alt="" />
             <div className='border-[1px] absolute bg-white rounded-lg w-[300px] p-3' >
                 <h1 className='text-[#007F00]  text-3xl mb-6 text-center'>Welcome!</h1>
                 <div className='flex flex-col gap-3'>

@@ -48,7 +48,7 @@ const ForeMan = () => {
     <>
       <NavbarItems />
       <div className='flex items-center justify-center h-screen'>
-        <img src={image} className='absolute w-full h-full -z-1 object-cover' alt="" />
+        <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className='absolute w-full h-full -z-1 object-cover' alt="" />
 
         <div className="w-full max-w-xs z-[999]">
           <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

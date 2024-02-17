@@ -91,7 +91,7 @@ const UserTable = () => {
     return (
             <div className='flex items-center justify-center h-screen'>
 
-                <img src={image} className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
+                <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
                <NavbarItems/>
 
                 <form onSubmit={handleSubmit} className="w-[400px] bg-white  p-5 rounded-lg mx-auto mt-8 form-user z-[999]">

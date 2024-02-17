@@ -10,7 +10,7 @@ const Trainings = () => {
     return (
             <div className='flex items-center justify-center h-screen  mt-5'>
                 <NavbarItems />
-                <img src={image} className='w-full fixed top-0 object-cover h-full' alt="" />
+                <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className='w-full fixed top-0 object-cover h-full' alt="" />
                 <div className=' p-5 mt-10  rounded-lg bg-white z-[999] h-[600px] overflow-auto w-[700px] mx-auto   '>
                     <h1 className='text-3xl mb-2 text-center w-full mx-auto'>Training Courses</h1>
                     <div className='border-b-[1px] pb-2 border-black relative ' >

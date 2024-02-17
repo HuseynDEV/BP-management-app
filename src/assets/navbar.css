@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    .justify-end {
+        justify-content: flex-start;
+    }
+    .gap-10 {
+        gap: 0;
+    }
+    .w-30, .w-70 {
+        width: 100%;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+    }
+    .h-70, .leading-70 {
+        height: auto;
+        line-height: 1.5;
+    }
+    .px-4 {
+        padding: 1rem;
+    }
+}

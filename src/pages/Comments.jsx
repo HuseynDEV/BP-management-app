@@ -34,7 +34,7 @@ const Comments = () => {
 
             <div className='flex items-center justify-center h-screen'>
 
-                <img src={image} className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
+                <img src='https://www.bp.com/content/dam/bp/country-sites/en_gb/united-kingdom/home/images/16-9/clair-ridge.jpg' className='absolute top-0 w-full h-full -z-1 object-cover' alt="" />
                 <NavbarItems />
                 <div className='z-[999] bg-white p-5 rounded-md'>
                     <h1 className='text-2xl text-center' >Thoughts and suggestions can be sent through this email.</h1>
