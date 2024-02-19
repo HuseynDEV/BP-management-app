@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutForeman, logoutUser } from '../features/userSlice';
-import '../assets/navbar.css'
 
 const NavbarItems = () => {
     const navigate = useNavigate();
@@ -28,10 +27,10 @@ const NavbarItems = () => {
                         <img src="https://www.bp.com/apps/settings/wcm/designs/refresh/bp/images/navigation/bp-logo.svg" alt="" className='w-[60px] h-[60px]' />
                     </Link>
                 </div>
-                <div className='flex items-center justify-end gap-10 w-[70%]'>
+                <div className='flex  items-center justify-end gap-10 w-[70%]'>
                     {
                         id && (
-                            <div className='text-[#007F00]'>
+                            <div className='text-[#007F00]'>    
                                 <Link className='text-center text-[#007F00] hover:text-white hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
                                 <Link className='text-center text-[#007F00] hover:text-white hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
                                 <Link className='text-center text-[#007F00] hover:text-white hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
