@@ -53,6 +53,10 @@
             "dest": "/"
         },
         {
+            "src": "/archive",
+            "dest": "/"
+        },
+        {
             "src": "/usertable/:id/profile",
             "dest": "/"
         }
