@@ -30,7 +30,7 @@ const NavbarItems = () => {
                 <div className='flex  items-center justify-end gap-10 w-[70%]'>
                     {
                         id && (
-                            <div className='text-[#007F00]'>    
+                            <div className='flex text-[#007F00]'>    
                                 <Link className='text-center text-[#007F00] hover:text-white hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl' to={`/usertable/${id}/profile`}>My Profile</Link>
                                 <Link className='text-center text-[#007F00] hover:text-white hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl whitespace-nowrap' to='/comments'>Thoughts and Opinions</Link>
                                 <Link className='text-center text-[#007F00] hover:text-white hover:bg-[#007F00] h-[70px] leading-[70px] px-4 block font-medium text-xl' to={`/usertable/${id}`}>TimeSheet</Link>
